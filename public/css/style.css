@@ -8,60 +8,98 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: pink;
 }
-h1{
-    font-size: 40px;
+/* Header Top */
+.mainHeader{
+    background-color: #EAC926;
+    padding: 20px;
 }
-.contenido{
-    width: 90vw;
-    padding: 15px;
-    border: 5px solid #000fff;
-    margin-bottom: 40px;
+.logo{
+    width: 200px;
 }
-.prueba{
-    border: solid 5px #000fff;
-    width: 50vw;
+.hamburguer-button{
+    background-color: #03264C;
+    color: white;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+.textoCompraTarjetaCredito{
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+}
+/* Header Bottom */
+.mainNavbar{
+    display: none;
+}
+.mainNavbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.mainNavbar ul a{
+    text-decoration: none;
+    color: #222;
+    display: inline-block;
+    padding: 4px 0;
+    font-size: 17px;
 }
 
-@media screen and (min-width: 576px){
-    body{
-        background-color: yellow;
+@media screen and (min-width: 768px) {
+    /* Header Top */
+    .mainHeaderTop{
+        display: flex;
+        justify-content: space-between;
     }
-    .contenido{
-        width: 70vw;
-        margin: 0 auto 40px;
+    .textoCompraTarjetaCredito{
+        max-width: 45%;
+        text-align: end;
     }
-    .prueba{
-        width: 70vw;
-        margin: auto;
+    .hamburguer-button{
+        display: none;
     }
-}
-
-@media screen and (min-width: 768px){
-    body{
-        background-color: #fff;
+    /* Header bottom */
+    .mainNavbar{
+        display: flex;
+        justify-content: space-between;
+        
     }
-    .contenido{
-        background-color: rgb(255, 0, 0);
+    .mainNavbar ul{
+        display: flex;
     }
-    .prueba{
-        background-color: rgb(69, 221, 248);
+    .mainNavbar ul li{
+        margin: 0 5px;
     }
-}
-@media screen and (min-width: 992px){
-
-    .contenido{
-        border: solid 10px #000fff;
-    }
-    .prueba{
-        border: solid 10px #000fff;
+    .mainNavbar ul li i{
+        margin: 0 5px;
     }
 }
 @media screen and (min-width: 1200px){
-
-    .contenido{
-        max-width: 1100px;
+    .mainHeaderTop{
+        align-items: center;
+    } 
+    .mainHeader div{
+        max-width: 75%;
+        margin: auto;
     }
-    .prueba{
-        max-width: 1100px;
+    .logo{
+        width: 250px;
+    }
+    .mainNavbar{
+        margin-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .textoCompraTarjetaCredito{
+        max-width: none;
+        font-size: 22px;
+        font-weight: 400;
+    }
+    .mainNavbar ul li a{
+        font-size: 19px;
     }
 }
